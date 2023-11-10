@@ -1,15 +1,24 @@
 import Button from './src/components/MLISUPERAPP/Button';
 import closeIcon from './assets/Icons/close.png';
+import {indianOrange,white,shadowColor} from './src/themes/colors'
+import stringText from './src/themes/stringText';
+import sizes from './src/themes/sizes';
 
 function App() {
+  const handleClick = () => {
+    alert ('login');
+  }
   return (
     <Button
-      btnText={'Click Me'}
-      btnWidth={232}
-      height={48}
-      borderRadius={200}
-      backgroundColor={'#F27930'}
-      rightIcon={closeIcon}
+      btnText={stringText.loginButtonText}
+      btnWidth={sizes.buttonWidth}
+      height={sizes.buttonHeight}
+      borderRadius={sizes.buttonBorderRadius}
+      backgroundColor={white}
+      borderColor={shadowColor}
+      borderWidth={sizes.buttonBorderWidth}
+      // rightIcon={closeIcon}
+      onPress={handleClick}
     />
   );
 }
